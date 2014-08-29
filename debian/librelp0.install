@@ -1,1 +1,1 @@
-usr/lib/librelp.so.*
+usr/lib/*/librelp.so.*

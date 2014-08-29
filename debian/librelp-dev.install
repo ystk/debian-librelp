@@ -1,3 +1,4 @@
 usr/include/*
-usr/lib/librelp.{so,a}
-usr/lib/pkgconfig/relp.pc
+usr/lib/*/librelp.a
+usr/lib/*/librelp.so
+usr/lib/*/pkgconfig/relp.pc

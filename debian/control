@@ -2,15 +2,20 @@ Source: librelp
 Section: libs
 Priority: optional
 Maintainer: Michael Biebl <biebl@debian.org>
-Build-Depends: cdbs, debhelper (>= 7), autotools-dev
-Standards-Version: 3.8.3
-Vcs-Git: git://git.debian.org/git/collab-maint/librelp.git
-Vcs-Browser: http://git.debian.org/?p=collab-maint/librelp.git;a=summary
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               libgnutls28-dev (>= 2.10.0),
+               pkg-config
+Standards-Version: 3.9.5
+Vcs-Git: git://anonscm.debian.org/collab-maint/librelp.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/librelp.git;a=summary
 Homepage: http://www.librelp.com/
 
 Package: librelp0
 Architecture: any
+Multi-Arch: same
 Section: libs
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Reliable Event Logging Protocol (RELP) library
  RELP provides reliable event logging over the network.
@@ -30,6 +35,7 @@ Description: Reliable Event Logging Protocol (RELP) library
 
 Package: librelp-dev
 Architecture: any
+Multi-Arch: same
 Section: libdevel
 Depends: librelp0 (= ${binary:Version}), ${misc:Depends}
 Description: Reliable Event Logging Protocol (RELP) library - development files
